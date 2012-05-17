@@ -15,11 +15,3 @@ class BookInStock
     "ISBN: #{@isbn}, price: #{@price}"
   end
 end
-
-book = BookInStock.new("isbn1", 33.80)
-puts "ISBN = #{book.isbn}"
-puts "Price = #{book.price}"
-puts "Price in cents = #{book.price_in_cents}"
-book.price_in_cents = 1234
-puts "Price = #{book.price}"
-puts "Price in cents = #{book.price_in_cents}"
