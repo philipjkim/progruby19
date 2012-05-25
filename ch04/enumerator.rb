@@ -25,3 +25,24 @@ long_enum = long_array.to_enum
 loop do
   puts "#{long_enum.next} - #{short_enum.next}"
 end
+
+result = []
+['a,', 'b', 'c'].each_with_index {|item, index| result << [item, index]}
+p result
+
+result = []
+"cat".each_char.each_with_index {|item, index| result << [item, index]}
+p result
+
+result = []
+"cat".each_char.with_index {|item, index| result << [item, index]}
+p result
+
+enum = "cat".enum_for(:each_char)
+p enum.to_a
+
+enum = "cat".each_char
+p enum.to_a
+
+enum_good = (1..10).enum_for(:each_slice, 3)
+p enum_good.to_a
