@@ -3,7 +3,8 @@ operator = gets
 print "number: "
 number = Integer(gets)
 if operator =~ /^t/
-  puts((1..10).collect {|n| "#{number}*#{n}=#{n*number}"}.join(", "))
+  calc = lambda {|n| "#{number}*#{n}=#{n*number}"}
 else
-  puts((1..10).collect {|n| "#{number}+#{n}=#{n+number}"}.join(", "))
+  calc = lambda {|n| "#{number}+#{n}=#{n+number}"}
 end
+puts (1..10).collect(&calc).join(", ")
