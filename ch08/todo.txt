@@ -1,1 +1,0 @@
-from p.145 Collecting Hash Arguments
