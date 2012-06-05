@@ -1,0 +1,7 @@
+TextMate may be the latest craze for developing Ruby on Rails applications, but Vim is forever.  This plugin offers the following features for Ruby on Rails application development. 
+
+1. Automatically detects buffers containing files from Rails applications, and applies settings to those buffers (and only those buffers).  You can use an autocommand to apply your own custom settings as well. 
+
+2. Unintrusive.  Only files in a Rails application should be affected; regular Ruby scripts are left untouched.  Even when enabled, the plugin should keep out of your way if you're not using its features. 
+
+3. Easy navigation of the Rails directory structure.  gf considers context and knows about partials, fixtures, and much more.  There are two commands, :A (alternate) and :R (related) for easy jumping between files, including favorites like model to migration, template to helper, and controller to functional test.  For more advanced usage, :Rmodel, :Rview, :Rcontroller, and several other commands are provided. 
