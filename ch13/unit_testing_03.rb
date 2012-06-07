@@ -10,4 +10,10 @@ class TestRoman < MiniTest::Unit::TestCase
       assert_equal roman, r.to_s
     end
   end
+  def test_range
+    Roman.new(1)
+    Roman.new(4999)
+    assert_raises(RuntimeError) { Roman.new(0) }
+    assert_raises(RuntimeError) { Roman.new(5000) }
+  end
 end
