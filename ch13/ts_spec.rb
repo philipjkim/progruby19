@@ -19,4 +19,13 @@ describe "TennisScorer", "basic scoring" do
     @ts.give_point_to(:receiver)
     @ts.score.should == "15-15"
   end
+  it "should be 40-0 after the server wins three points" do
+    3.times { @ts.give_point_to(:server) }
+    @ts.score.should == "40-0"
+  end
+  it "should be W-L after the server wins four points"
+  it "should be L-W after the receiver wins four points"
+  it "should be Deuce after each wins three points"
+  it "should be A-server after each wins three points and the server gets one more"
+  it "should be A-receiver after each wins three points and the receiver gets one more"
 end
