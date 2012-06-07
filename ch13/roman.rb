@@ -1,4 +1,3 @@
-# NOTE: This code has bugs!
 class Roman
   MAX_ROMAN = 4999
   def initialize(value)
@@ -16,7 +15,7 @@ class Roman
     roman = ""
     for code, factor in FACTORS
       count, value = value.divmod(factor)
-      roman << code unless count.zero?
+      roman << (code * count)
     end
     roman
   end
