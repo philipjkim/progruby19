@@ -1,5 +1,5 @@
-require_relative 'roman'
 require 'test/unit'
+require 'lib/roman'
 class TestRoman < MiniTest::Unit::TestCase
   NUMBERS = [[1, "i"], [2, "ii"], [3, "iii"],
              [4, "iv"], [5, "v"], [9, "ix"]
