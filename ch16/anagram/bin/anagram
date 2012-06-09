@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'anagram/runner'
+runner = Anagram::Runner.new(ARGV)
+runner.run
