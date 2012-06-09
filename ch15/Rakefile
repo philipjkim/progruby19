@@ -3,3 +3,15 @@ task :delete_unix_backups do
   files = Dir['*~']
   rm(files, verbose: true) unless files.empty?
 end
+
+desc "Remove files with a .bak extension"
+task :delete_windows_backups do
+  files = Dir['*.bak']
+  rm(files, verbose: true) unless files.empty?
+end
+
+desc "Remove Unix and Windows backup files"
+task :delete_backups =>
+        [ :delete_unix_backups, :delete_windows_backups ] do
+  puts "All backups deleted"
+end
