@@ -1,0 +1,5 @@
+desc "Remove files whose names end with a tilde"
+task :delete_unix_backups do
+  files = Dir['*~']
+  rm(files, verbose: true) unless files.empty?
+end
